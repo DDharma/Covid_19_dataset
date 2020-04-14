@@ -28,10 +28,10 @@ columns_name = df.columns
 #print(df.head(10))
 print(columns_name)
 
-#Creating Requries data and save into dictory
+'''#Creating Requries data and save into dictory
 df.to_csv ('Datasets/covid_19_clean_complete_add_no_of_days(23-march).csv', index = False, header=True)
 df.to_csv ('Datasets/covid_19_clean_data(23-march).csv', index = False, header=True)
-
+'''
 #Creating some empty list
 Days = []
 Confirmed = []
@@ -68,16 +68,16 @@ data = {'Days':Days,
         'Deaths':Deaths,
         'Recovered':Recovered
         }
-#Creating data frame         
+'''#Creating data frame         
 df_1 = pd.DataFrame(data,columns = ['Days','Confirmed','Deaths','Recovered'])
 #Converting data frame into csv file and save into Datasets Directory
 df_1.to_csv('Datasets/covid_19_clean_data_Daywise(23-march).csv',index = False, header = True)
-
+'''
 #Ploting curve
 plt.plot(Days,Confirmed,color="red")
 plt.plot(Days,Deaths,color="blue")
 plt.plot(Days,Recovered,color="green")
 plt.legend(['Confirmed','Deaths','Recovered'])
-plt.xlabel("NUMBER OF PEOPLE")
-plt.ylabel("NUMBER OF DAYS")
+plt.ylabel("NUMBER OF PEOPLE")
+plt.xlabel("NUMBER OF DAYS")
 plt.show()
